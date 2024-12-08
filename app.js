@@ -12,7 +12,7 @@ async function fetchPokemon(){
     const pokemonName = document.getElementById('pokemonName').value.toLowerCase();
 
     if (pokemonName.length === 0) {
-      throw new Error("Can't fetch empty data!")
+      throw new Error("Cannot fetch empty data!")
     }
     
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
