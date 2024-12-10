@@ -5,32 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Finder</title>
-
 </head>
 
 <body>
-    <div id="pokemon-finder">
-        <h1>Pokemon Finder</h1>
-    </div>
 
-    <div class="search-bar">
-        <input type="text" id="pokemonName" placeholder="Catch your Pokemon">
-        <button onclick="fetchPokemon()" id="searchButton">Catch!</button><br>       
-    </div>
+    <div id="root"></div>
+    <script
+        src="https://unpkg.com/react@18/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
 
-    <div id="loading-screen" style="display: none;">
-        <p>Loading...</p>
-      </div>
+    <script type="text/babel" src="./src/index.js">
+    </script>
+    
 
-    <div id="onePokemon" style="display: none;">
-        <img src="" alt="Pokemon Sprite" id="pokemonSprite">
-        <div id="detale">
-
-        </div>
-    </div>
-    <section id="pokemon-list">
-    </section>
-
-    <script src="app.js"></script>
 </body>
 </html>
