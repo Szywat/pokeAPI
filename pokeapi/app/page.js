@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Loading from "./components/Loading";
 import SearchBar from "./components/SearchBar";
 import PokemonDetails from "./components/PokemonDetails"
+import Filter from "./components/Filter"
 
 export default function Home() {
   const [loading, setLoading] = useState({ display: "none" });
@@ -35,11 +36,14 @@ export default function Home() {
 
 
   return (
-      <div id="pokemon-finder">
-        <h1>Pokemon Finder</h1>
-        <Loading loadingType={loading} />
-        <SearchBar search={fetchPokemon}/>
-        {selectedPokemon && <PokemonDetails pokemon={selectedPokemon}/>}
+    <div>
+        <div id="pokemon-finder">
+          <h1>Pokemon Finder</h1>
       </div>
+      <Loading loadingType={loading} />
+      <SearchBar search={fetchPokemon}/>
+      {selectedPokemon && <PokemonDetails pokemon={selectedPokemon}/>}
+    </div>
+
   );
 }

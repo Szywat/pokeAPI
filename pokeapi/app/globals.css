@@ -1,6 +1,7 @@
 body {
   background-color: #f0f8ff;
   font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
 }
 
 a {
@@ -216,4 +217,47 @@ a {
 
 #favorites {
   text-align: center;
+}
+
+.filter-bar {
+  margin: auto;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: lightgrey;
+  width: fit-content;
+  padding: 1em;
+}
+
+.filter-name {
+  padding-bottom: 1em;
+}
+
+.filter-type {
+  padding-bottom: 1em;
+}
+
+.filter-limit {
+  padding-bottom: 1em;
+}
+
+.filter-button {
+  width: 9em;
+  height: 3em;
+  background-color: #ff6f61;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.error {
+  text-align: center;
+  font-weight: 700;
+  font-size: large;
+  background-color: #ff6f61;
+  width: fit-content;
+  margin: auto;
+  padding: 1em;
+  border-radius: 15px;
 }
