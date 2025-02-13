@@ -38,7 +38,8 @@ export default function PokemonPage() {
           });
   
           let detailedPokemons = await Promise.all(pokemonPromise);
-  
+          console.log(data);
+          
           if (search) {
             detailedPokemons = detailedPokemons.filter((pokemon) =>
               pokemon.name.toLowerCase().includes(search.toLowerCase())
@@ -60,13 +61,14 @@ export default function PokemonPage() {
           };
   
           const data = await response.json();
+          
           const pokemonPromise = data.results.map(async (pokemon) => {
             const pokemonData = await fetch(pokemon.url);
             return pokemonData.json();
           });
-  
+          
           let detailedPokemons = await Promise.all(pokemonPromise);
-  
+          
           if (search) {
             detailedPokemons = detailedPokemons.filter((pokemon) =>
               pokemon.name.toLowerCase().includes(search.toLowerCase())

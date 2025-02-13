@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Loading from "./components/Loading";
 import SearchBar from "./components/SearchBar";
 import PokemonDetails from "./components/PokemonDetails"
-import Filter from "./components/Filter"
 
 export default function Home() {
   const [loading, setLoading] = useState({ display: "none" });
