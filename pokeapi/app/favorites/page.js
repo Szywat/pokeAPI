@@ -22,24 +22,22 @@ export default function FavoritesPage() {
       {favorites.length === 0 ? (
         <p>You don't have any favorite Pokémon yet!</p>
       ) : (
-        <ul id="list-fav">
-          {favorites.map((pokemon) => (
-            <li key={pokemon.name} id="item-fav">
-              <img
-                src={pokemon.image}
+        <section id="pokemon-list">
+          {favorites.map(pokemon => (
+            <div key={pokemon.name} className="pokemon">
+              <img src={pokemon.image}
                 alt={pokemon.name}
-                style={{ width: "50px", height: "50px", marginRight: "10px" }}
               />
-              <span>{pokemon.name}</span>
+              <p>{pokemon.name}</p>
               <button
                 onClick={() => removeFromFavorites(pokemon.name)}
                 id="button-fav"
               >
                 Remove
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
+        </section>
       )}
     </div>
   );
